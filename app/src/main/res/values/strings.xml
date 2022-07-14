@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Esg_Donation</string>
+    <string name="sign_up_button">가입하기</string>
+    <string name="login_button">로그인</string>
+
 </resources>

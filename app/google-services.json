@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "451136411648",
+    "project_id": "esg-project-ed22f",
+    "storage_bucket": "esg-project-ed22f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451136411648:android:0ab33a36c8412070d5a0e5",
+        "android_client_info": {
+          "package_name": "com.example.esg_donation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451136411648-l3qs5ecofcg0gqhvrahcm0dp7r5o5rqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmRY4m1agtoKZl9g1Tuk5tVl0Lj90zdzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451136411648-l3qs5ecofcg0gqhvrahcm0dp7r5o5rqf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

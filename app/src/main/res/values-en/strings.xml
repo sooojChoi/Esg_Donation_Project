@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Esg_Donation</string>
+    <string name="sign_up_button">sign up</string>
+    <string name="login_button">sign in</string>
+</resources>
