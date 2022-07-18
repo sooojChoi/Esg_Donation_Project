@@ -32,6 +32,9 @@ class LogInActivity : AppCompatActivity() {
 
     }
 
+    fun finishActivity(){
+        finish()
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.fragmentContainerView2)

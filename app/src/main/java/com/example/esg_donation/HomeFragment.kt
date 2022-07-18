@@ -46,6 +46,10 @@ class Fragment3 : Fragment(R.layout.fragment_mypage){
             startActivity(intent)
         }
 
+        binding.nameLayout.setOnClickListener {
+
+        }
+
     }
 
     override fun onStart() {
@@ -57,15 +61,15 @@ class Fragment3 : Fragment(R.layout.fragment_mypage){
             // 로그인되어 있다면
             binding.loginNoticeLayout.visibility = View.GONE
             binding.noticeImageView.visibility = View.GONE
-            binding.nameTextView.visibility = View.VISIBLE
-            binding.profileImageView.visibility = View.VISIBLE
-            binding.signButton.visibility = View.GONE
+            binding.nameLayout.visibility = View.VISIBLE
+            binding.signLayout.visibility = View.GONE
+            binding.worldImageViewLayout.visibility = View.GONE
         }else{
             binding.loginNoticeLayout.visibility = View.VISIBLE
             binding.noticeImageView.visibility = View.VISIBLE
-            binding.nameTextView.visibility = View.GONE
-            binding.profileImageView.visibility = View.GONE
-            binding.signButton.visibility = View.VISIBLE
+            binding.nameLayout.visibility = View.GONE
+            binding.signLayout.visibility = View.VISIBLE
+            binding.worldImageViewLayout.visibility = View.VISIBLE
         }
     }
 }

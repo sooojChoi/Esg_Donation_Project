@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -54,6 +55,7 @@ class SignInFragment : Fragment(R.layout.activity_donator_login){
 
 //                            val intent = Intent(this, HomeActivity::class.java)
 //                            startActivity(intent)
+                            (activity as LogInActivity).finishActivity()
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
@@ -86,6 +88,20 @@ class SignUpFragment : Fragment(R.layout.activity_donator_signup){
 
         // Initialize Firebase Auth
         auth = Firebase.auth
+
+
+        // 이메일 형식을 올바르게 입력했는지 검사한다.
+        binding.editTextTextEmailAddress.doOnTextChanged { text, start, before, count ->
+            val pattern = Patterns.EMAIL_ADDRESS
+            if(pattern.matcher(text.toString()).matches()){
+                // 이메일이 맞다면
+                binding.emailNoticeTextView.visibility = View.INVISIBLE
+            }else{
+                // 이메일 형식이 아니라면
+                binding.emailNoticeTextView.visibility = View.VISIBLE
+            }
+        }
+
 
         // 비밀번호가 일치하는지 검사한다.
         binding.editTextForCheckPassword.doOnTextChanged { text, start, before, count ->
@@ -127,8 +143,9 @@ class SignUpFragment : Fragment(R.layout.activity_donator_signup){
                                             //     val user = auth.currentUser
                                             //updateUI(user)
 
-                                            val intent = Intent(activity, HomeActivity::class.java)
-                                            startActivity(intent)
+//                                            val intent = Intent(activity, HomeActivity::class.java)
+//                                            startActivity(intent)
+                                            (activity as LogInActivity).finishActivity()
                                         } else {
                                             // If sign in fails, display a message to the user.
                                             Log.w(TAG, "signInWithEmail:failure", task2.exception)
