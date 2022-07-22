@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/change_my_info_nav"
+    app:startDestination="@id/editMyInfoHomeFragment">
+
+    <fragment
+        android:id="@+id/editMyInfoHomeFragment"
+        android:name="com.example.esg_donation.EditMyInfoHomeFragment"
+        android:label="EditMyInfoHomeFragment" >
+        <action
+            android:id="@+id/action_editMyInfoHomeFragment_to_checkPassWordFragment"
+            app:destination="@id/checkPassWordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkPassWordFragment"
+        android:name="com.example.esg_donation.CheckPassWordFragment"
+        android:label="CheckPassWordFragment" >
+        <action
+            android:id="@+id/action_checkPassWordFragment_to_editPassWordFragment"
+            app:destination="@id/editPassWordFragment" />
+        <action
+            android:id="@+id/action_checkPassWordFragment_to_editMyInfoHomeFragment"
+            app:destination="@id/editMyInfoHomeFragment"
+            app:popUpTo="@id/editMyInfoHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPassWordFragment"
+        android:name="com.example.esg_donation.EditPassWordFragment"
+        android:label="EditPassWordFragment" >
+        <action
+            android:id="@+id/action_editPassWordFragment_to_editMyInfoHomeFragment"
+            app:destination="@id/editMyInfoHomeFragment"
+            app:popUpTo="@id/editMyInfoHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
